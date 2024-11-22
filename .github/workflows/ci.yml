@@ -26,12 +26,12 @@ jobs:
 
       - name: Run tests
         run: |
-          source venv/bin/activate
+          source ci-venv/bin/activate
           pytest
         
       - name: Run tests with coverage
         run: |
-          source venv/bin/activate
+          source ci-venv/bin/activate
           pytest --cov=app
 
       - name: Run Black
