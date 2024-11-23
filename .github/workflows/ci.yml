@@ -3,7 +3,7 @@ name: CI for Trunk-Based Development
 on:
   push:
     branches:
-      - main
+      - for/main
 
 jobs:
   test:
