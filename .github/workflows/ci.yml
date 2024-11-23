@@ -35,10 +35,11 @@ jobs:
           pytest --cov=app
 
       - name: Run Black
-        run: black --exclude 'ci-venv' .
+        run: |
+          source ci-venv/bin/activate
+          black --check --exclude 'ci-venv' .
 
       - name: Run Flake8
-        run: flake8 --exclude=ci-venv/* .
-
-      
-        
+        run: |
+          source ci-venv/bin/activate
+          flake8 --exclude=ci-venv/* .
